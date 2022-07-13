@@ -30,6 +30,18 @@ const values = [
  * @param {Array} array 
  */
 
-function logIt(array) {}
+function logIt(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] === 'object'){
+      for (const key in array[i]) {
+        // return array[i][key]
+        console.log(array[i][key])
+      }
+    } else {
+      // return array[i]
+      console.log(array[i])
+      }    
+  }
+}
 
 logIt(values);

@@ -53,7 +53,7 @@ const ticketInfo = {
 /**
  * findPrice()
  * ----------------
- * Basedon the above ticket Info object,
+ * Based on the above ticket Info object,
  * Dynamically return a string that says:
    'General Admission for a child is $20.00'
  * Your solution should work for any ticketInfo object containing
@@ -63,6 +63,8 @@ const ticketInfo = {
  * @param {Object} info 
  * @return {string}
  */
-function findPrice(tickets, info) {}
+function findPrice(tickets, info) {
+  
+}
 
 console.log(findPrice(ticketTypes, ticketInfo));
