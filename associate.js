@@ -64,7 +64,11 @@ const ticketInfo = {
  * @return {string}
  */
 function findPrice(tickets, info) {
-  
+  if (info.ticketType === 'movie' || info.ticketType === 'education' || info.ticketType === 'terrace'){
+    return `${tickets['extras'][info.ticketType]['description']} for a(n) ${info.entrantType} is $${(tickets['extra'][info.ticketType]['priceInCents'][info.entrantType] / 100).toFixed(2)}`
+  } else {
+    return `${tickets[info.ticketType][`description`]} for a(n) ${info.entrantType} is $${(tickets[info.ticketType][`priceInCents`][info.entrantType] / 100).toFixed(2)}`
+  }
 }
 
 console.log(findPrice(ticketTypes, ticketInfo));
